@@ -1,0 +1,189 @@
+/* =========================================
+   CODEQUEST ACADEMY — ПЕРЕИСПОЛЬЗУЕМЫЕ
+   КАРТОЧКИ / ПРОГРЕСС / ПАНЕЛИ
+========================================= */
+
+/* ===== ОБУЧЕНИЕ: КАРТОЧКА КУРСА ===== */
+
+.learning-card {
+    min-width: 0;
+    padding: 23px;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    background: var(--surface);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.learning-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary);
+}
+
+.learning-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.learning-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    background: var(--surface-hover);
+    font-size: 27px;
+}
+
+.level-label {
+    padding: 6px 9px;
+    border-radius: 7px;
+    background: var(--surface-hover);
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.learning-card h2 {
+    margin: 20px 0 8px;
+    font-size: 19px;
+    color: var(--text);
+}
+
+.learning-card p {
+    min-height: 48px;
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.learning-progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 22px 0 9px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.learning-progress-info strong {
+    color: var(--text);
+}
+
+.progress-track {
+    height: 7px;
+    margin-bottom: 17px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: var(--surface-hover);
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: var(--primary);
+}
+
+.learning-card button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ===== ПУСТОЕ СОСТОЯНИЕ ===== */
+
+.course-empty {
+    grid-column: 1 / -1;
+    padding: 35px;
+    color: var(--muted);
+    text-align: center;
+}
+
+/* ===== СТАТИСТИКА: ПАНЕЛЬ / СТРОКИ ===== */
+
+.statistics-panel {
+    margin-top: 22px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background: var(--surface);
+}
+
+.statistics-panel h2 {
+    margin: 0 0 18px;
+    color: var(--text);
+    font-size: 18px;
+}
+
+.statistics-panel p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.statistics-panel strong {
+    color: var(--text);
+}
+
+#statisticsDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#statisticsDetails p {
+    margin: 10px 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+#statisticsDetails p strong {
+    color: var(--text);
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+}
+
+.stats-row:last-child {
+    border-bottom: 0;
+}
+
+.stats-row span:first-child {
+    color: var(--muted);
+}
+
+.stats-row span:last-child {
+    color: var(--secondary);
+    font-weight: 700;
+    text-align: right;
+}
+
+/* ===== КУРСЫ: ОПЫТ ===== */
+
+.course-xp {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: fit-content;
+    margin: 20px 0;
+    padding: 12px 17px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--secondary);
+}
+
+.course-xp span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.course-empty,
+.learning-card {
+    overflow-wrap: any;
+}

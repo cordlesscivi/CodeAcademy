@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090d18">
+
+    <title>CodeQuest Academy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/courses.css">
+    <link rel="stylesheet" href="css/pages/practice.css">
+    <link rel="stylesheet" href="css/pages/projects.css">
+    <link rel="stylesheet" href="css/pages/achievements.css">
+    <link rel="stylesheet" href="css/pages/statistics.css">
+    <link rel="stylesheet" href="css/pages/profile.css">
+    <link rel="stylesheet" href="css/pages/quiz.css">
+    <link rel="stylesheet" href="css/profile-topbar.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+<div class="app-shell">
+
+    <aside class="sidebar" id="sidebar">
+        <div class="brand">
+            <div class="brand-icon">
+                <i data-lucide="code-2"></i>
+            </div>
+            <span>CodeQuest<span class="brand-accent">.</span></span>
+        </div>
+
+        <div class="sidebar-label">ОБУЧЕНИЕ</div>
+
+        <nav class="sidebar-nav">
+            <button class="nav-item active" data-page="dashboard">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Главная</span>
+            </button>
+
+            <button class="nav-item" data-page="courses">
+                <i data-lucide="book-open"></i>
+                <span>Все курсы</span>
+            </button>
+
+            <button class="nav-item" data-page="practice">
+                <i data-lucide="terminal"></i>
+                <span>Практика</span>
+            </button>
+
+            <button class="nav-item" data-page="projects">
+                <i data-lucide="folder-code"></i>
+                <span>Проекты</span>
+            </button>
+
+            <button class="nav-item" data-page="quiz">
+                <i data-lucide="clipboard-list"></i>
+                <span>Тесты</span>
+            </button>
+        </nav>
+
+        <div class="sidebar-label">МОЙ ПРОГРЕСС</div>
+
+        <nav class="sidebar-nav">
+            <button class="nav-item" data-page="achievements">
+                <i data-lucide="trophy"></i>
+                <span>Достижения</span>
+            </button>
+
+            <button class="nav-item" data-page="statistics">
+                <i data-lucide="chart-no-axes-combined"></i>
+                <span>Статистика</span>
+            </button>
+
+            <button class="nav-item" data-page="profile">
+                <i data-lucide="user-round"></i>
+                <span>Мой профиль</span>
+            </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-tip">
+                <div class="tip-icon">💡</div>
+                <strong>Совет дня</strong>
+                <p>Лучший способ научиться программировать — регулярно писать код.</p>
+            </div>
+
+            <button class="nav-item" id="themeButton">
+                <i data-lucide="palette"></i>
+                <span>Сменить тему</span>
+            </button>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <button class="mobile-menu" id="mobileMenu">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <div class="breadcrumb">
+                Академия <span>/</span>
+                <strong id="pageTitle">Главная</strong>
+            </div>
+
+            <div class="topbar-right">
+                <div class="xp-indicator">
+                    <span>⚡</span>
+                    <strong id="topXP">0 XP</strong>
+                </div>
+
+                <button class="profile-mini" data-page="profile">
+                    <span class="profile-mini-avatar">
+                        <i data-lucide="user-round"></i>
+                    </span>
+
+                    <span class="profile-mini-info">
+                        <strong>Мой профиль</strong>
+                        <small>Прогресс обучения</small>
+                    </span>
+
+                    <span class="profile-mini-level" id="topLevel">
+                        Уровень 1
+                    </span>
+                </button>
+            </div>
+        </header>
+
+        <div class="page-content">
+
+            <!-- ГЛАВНАЯ -->
+            <section class="page active" id="page-dashboard">
+                <div class="welcome-banner">
+                    <div class="welcome-content">
+                        <span class="eyebrow">ТВОЁ ПУТЕШЕСТВИЕ В IT</span>
+
+                        <h1>Создавай будущее<br>
+                            <span>строка за строкой.</span>
+                        </h1>
+
+                        <p>
+                            Изучай технологии, решай задачи и создавай
+                            собственные проекты.
+                        </p>
+
+                        <button class="btn-primary" data-page="courses">
+                            Продолжить обучение
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="welcome-decoration">
+                        <div class="orb orb-one"></div>
+                        <div class="orb orb-two"></div>
+
+                        <div class="code-window">
+                            <div class="window-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+
+                            <pre><code><span class="code-purple">function</span> <span class="code-blue">buildFuture</span>() {
+  <span class="code-purple">const</span> skills = <span class="code-green">"CodeQuest"</span>;
+
+  <span class="code-purple">return</span> skills + <span class="code-green">" 🚀"</span>;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-title">
+                    <div>
+                        <h2>Твой прогресс</h2>
+                        <p>Каждый шаг приближает тебя к цели</p>
+                    </div>
+                </div>
+
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="overview-icon purple">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <span>Всего опыта</span>
+                        <strong id="dashboardXP">0 XP</strong>
+                        <small>Продолжай учиться!</small>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="overview-icon green">
+                            <i data-lucide="book-check"></i>
+                        </div>
+                        <span>Завершено уроков</span>
+                        <strong id="dashboardLessons">0</strong>
+                        <small>Уроки академии</small>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="overview-icon orange">
+                            <i data-lucide="flame"></i>
+                        </div>
+                        <span>Серия занятий</span>
+                        <strong id="dashboardStreak">0 дней</strong>
+                        <small>Твоя регулярность</small>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="overview-icon blue">
+                            <i data-lucide="trophy"></i>
+                        </div>
+                        <span>Достижения</span>
+                        <strong id="dashboardAchievements">0</strong>
+                        <small>Новые награды впереди</small>
+                    </div>
+                </div>
+
+                <div class="dashboard-columns">
+                    <div class="main-column">
+                        <div class="section-title">
+                            <div>
+                                <h2>Продолжить обучение</h2>
+                                <p>Твои направления развития</p>
+                            </div>
+
+                            <button class="text-button" data-page="courses">
+                                Все курсы →
+                            </button>
+                        </div>
+
+                        <div id="dashboardContinue"></div>
+
+                        <div class="course-list" id="dashboardCourses"></div>
+
+                        <div class="section-title project-heading">
+                            <div>
+                                <h2>Практические проекты</h2>
+                                <p>Превращай знания в реальные приложения</p>
+                            </div>
+
+                            <button class="text-button" data-page="projects">
+                                Все проекты →
+                            </button>
+                        </div>
+
+                        <div class="project-preview" id="dashboardProjects"></div>
+                    </div>
+
+                    <aside class="right-column">
+                        <div class="daily-card">
+                            <div class="daily-top">
+                                <span>🔥</span>
+                                <span>ЕЖЕДНЕВНОЕ ЗАДАНИЕ</span>
+                            </div>
+
+                            <h3>Не прерывай обучение!</h3>
+                            <p>Пройди небольшое испытание и получи дополнительные XP.</p>
+
+                            <button class="btn-primary full-width" data-page="practice">
+                                Начать испытание
+                            </button>
+                        </div>
+
+                        <div class="level-card">
+                            <div class="level-top">
+                                <span>ТВОЙ УРОВЕНЬ</span>
+                                <strong id="levelNumber">01</strong>
+                            </div>
+
+                            <h3 id="levelName">Новичок</h3>
+
+                            <div class="level-progress">
+                                <div id="levelProgressFill"></div>
+                            </div>
+
+                            <p id="levelProgressText">0 / 100 XP до следующего уровня</p>
+                        </div>
+
+                        <div class="quick-card">
+                            <h3>Быстрый старт</h3>
+
+                            <button data-page="courses">
+                                <i data-lucide="code"></i>
+                                <span>Изучить Python</span>
+                                <i data-lucide="chevron-right"></i>
+                            </button>
+
+                            <button data-page="courses">
+                                <i data-lucide="database"></i>
+                                <span>Изучить SQL</span>
+                                <i data-lucide="chevron-right"></i>
+                            </button>
+
+                            <button data-page="projects">
+                                <i data-lucide="folder-plus"></i>
+                                <span>Создать проект</span>
+                                <i data-lucide="chevron-right"></i>
+                            </button>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- КУРСЫ -->
+            <section class="page" id="page-courses">
+                <div class="page-heading">
+                    <span class="eyebrow">БИБЛИОТЕКА ЗНАНИЙ</span>
+                    <h1>Все курсы</h1>
+                    <p>Выбирай направление и осваивай новые технологии.</p>
+                </div>
+
+                <div class="filter-bar">
+                    <input type="search" id="courseSearch"
+                           placeholder="Найти курс...">
+
+                    <select id="courseCategory">
+                        <option value="all">Все направления</option>
+                        <option value="language">Языки</option>
+                        <option value="database">Базы данных</option>
+                        <option value="framework">Фреймворки</option>
+                        <option value="tools">Инструменты</option>
+                    </select>
+                </div>
+
+                <div class="catalog-grid" id="courseCatalog"></div>
+            </section>
+
+            <!-- ПРАКТИКА -->
+            <section class="page" id="page-practice"></section>
+
+            <!-- ПРОЕКТЫ -->
+            <section class="page" id="page-projects">
+                <div class="page-heading">
+                    <span class="eyebrow">СОЗДАВАЙ СВОЁ</span>
+                    <h1>Практические проекты</h1>
+                    <p>Учись создавать настоящие приложения шаг за шагом.</p>
+                </div>
+
+                <div class="catalog-grid" id="projectCatalog"></div>
+            </section>
+
+            <!-- ТЕСТЫ -->
+            <section class="page" id="page-quiz"></section>
+
+            <!-- ДОСТИЖЕНИЯ -->
+            <section class="page" id="page-achievements">
+                <div class="page-heading">
+                    <span class="eyebrow">ТВОИ ПОБЕДЫ</span>
+                    <h1>Достижения</h1>
+                    <p>Награды за старание и новые навыки.</p>
+                </div>
+
+                <div class="catalog-grid" id="achievementCatalog"></div>
+            </section>
+
+            <!-- СТАТИСТИКА -->
+            <section class="page" id="page-statistics">
+                <div class="page-heading">
+                    <span class="eyebrow">АНАЛИЗ РЕЗУЛЬТАТОВ</span>
+                    <h1>Статистика</h1>
+                    <p>Следи за своим прогрессом и развитием.</p>
+                </div>
+
+                <div class="overview-grid" id="statisticsCards"></div>
+
+                <div class="statistics-panel">
+                    <h2>Активность и обучение</h2>
+                    <div id="statisticsDetails"></div>
+                </div>
+            </section>
+
+            <!-- ПРОФИЛЬ -->
+            <section class="page" id="page-profile"></section>
+
+        </div>
+    </main>
+</div>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

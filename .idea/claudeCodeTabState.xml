@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ClaudeCodeTabState">
+    <option name="tabSessions">
+      <map>
+        <entry key="0">
+          <value>
+            <TabSessionState>
+              <option name="projectPath" value="D:\projects\CodeAcademy" />
+              <option name="provider" value="claude" />
+              <option name="sessionId" value="2378edbb-d39c-4524-9bef-0589b77fbafb" />
+              <option name="cwd" value="D:\projects\CodeAcademy" />
+              <option name="model" value="claude-sonnet-5" />
+              <option name="permissionMode" value="default" />
+            </TabSessionState>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

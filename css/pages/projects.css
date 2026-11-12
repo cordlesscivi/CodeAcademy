@@ -1,0 +1,171 @@
+/* =========================================
+   CODEQUEST ACADEMY — СТРАНИЦА ПРОЕКТОВ
+========================================= */
+
+.projects-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 22px;
+    margin-bottom: 26px;
+    border: 1px solid var(--border-color, rgba(255,255,255,.1));
+    border-radius: 16px;
+    background: var(--card-bg, rgba(255,255,255,.04));
+}
+
+.projects-summary strong {
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+.projects-summary-progress {
+    height: 8px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: rgba(128,128,128,.2);
+}
+
+.projects-summary-progress div {
+    height: 100%;
+    border-radius: inherit;
+    background: #6366f1;
+    transition: width .3s ease;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    padding: 22px;
+    border: 1px solid var(--border-color, rgba(255,255,255,.1));
+    border-radius: 16px;
+    background: var(--card-bg, rgba(255,255,255,.04));
+}
+
+.project-card.completed {
+    border-color: #22c55e;
+}
+
+.project-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.project-icon,
+.project-modal-icon {
+    font-size: 32px;
+}
+
+.project-level {
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(99,102,241,.12);
+    color: #818cf8;
+    font-size: 12px;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 18px 0;
+    color: var(--muted-color, #999);
+    font-size: 13px;
+}
+
+.project-modal {
+    position: fixed;
+    z-index: 2100;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: rgba(0,0,0,.78);
+}
+
+.project-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px;
+    border: 1px solid var(--border-color, rgba(255,255,255,.15));
+    border-radius: 18px;
+    background: var(--card-bg, #171923);
+    color: var(--text-color, #fff);
+}
+
+.project-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.project-requirements {
+    margin: 24px 0;
+}
+
+.project-requirements h3 {
+    margin-bottom: 14px;
+}
+
+.project-requirement {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    background: rgba(128,128,128,.08);
+}
+
+.project-requirement span:first-child {
+    color: #818cf8;
+    font-weight: 700;
+}
+
+.project-modal-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: var(--muted-color, #999);
+}
+
+.project-completed-message {
+    padding: 14px;
+    border-radius: 10px;
+    background: rgba(34,197,94,.12);
+    color: #22c55e;
+    font-weight: 600;
+}
+
+.project-note {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--muted-color, #999);
+}
+
+@media (max-width: 700px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-modal-content {
+        padding: 24px 18px;
+    }
+}

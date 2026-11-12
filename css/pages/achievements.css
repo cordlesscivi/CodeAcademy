@@ -1,0 +1,84 @@
+/* =========================================
+   CODEQUEST ACADEMY — СТРАНИЦА ДОСТИЖЕНИЙ
+========================================= */
+
+#achievementCatalog {
+    align-items: stretch;
+}
+
+.achievement-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 210px;
+    padding: 24px;
+    overflow: hidden;
+    border: 1px solid var(--border-color, rgba(255,255,255,.1));
+    border-radius: 18px;
+    background: var(--card-bg, rgba(255,255,255,.04));
+    transition: transform .25s ease, border-color .25s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    border-color: #818cf8;
+}
+
+.achievement-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 18px;
+    border-radius: 16px;
+    background: rgba(99,102,241,.15);
+    font-size: 28px;
+}
+
+.achievement-card h3 {
+    margin: 0 0 9px;
+    font-size: 18px;
+}
+
+.achievement-card p {
+    margin: 5px 0;
+    color: var(--muted-color, #999);
+    line-height: 1.5;
+}
+
+.achievement-card p:last-child {
+    margin-top: auto;
+    padding-top: 16px;
+    color: #22c55e;
+    font-weight: 600;
+}
+
+.achievement-card.locked {
+    opacity: .65;
+}
+
+.achievement-card.locked .achievement-icon {
+    filter: grayscale(1);
+    background: rgba(128,128,128,.12);
+}
+
+.achievement-card.locked p:last-child {
+    color: var(--muted-color, #999);
+}
+
+.achievement-card:not(.locked)::after {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    content: "✓";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgba(34,197,94,.15);
+    color: #22c55e;
+    font-weight: 700;
+}

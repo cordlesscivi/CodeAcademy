@@ -1,0 +1,278 @@
+/* =========================================
+   CODEQUEST ACADEMY — ТЕСТЫ / КВИЗ
+========================================= */
+
+.quiz-container {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.quiz-progress {
+    margin-bottom: 26px;
+}
+
+.quiz-progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quiz-progress-info strong {
+    color: var(--text);
+    font-size: 13px;
+}
+
+.quiz-progress-info span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.quiz-progress-bar {
+    height: 8px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: var(--surface-hover);
+}
+
+.quiz-progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transition: width .3s ease;
+}
+
+.quiz-question-area {
+    display: block;
+}
+
+.quiz-question {
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface);
+}
+
+.quiz-category {
+    display: inline-block;
+    color: var(--secondary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.quiz-question h3 {
+    color: var(--text);
+    font-size: 21px;
+    line-height: 1.35;
+    margin: 0 0 11px;
+}
+
+.quiz-question > p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.quiz-code {
+    margin: 18px 0;
+    padding: 18px;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: #0a101d;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    line-height: 1.8;
+    color: #d9e2f2;
+    white-space: pre-wrap;
+}
+
+.quiz-options {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.quiz-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--surface-hover);
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.55;
+    cursor: pointer;
+    transition: border-color .2s, background .2s, transform .2s;
+}
+
+.quiz-option:hover {
+    border-color: var(--primary);
+}
+
+.quiz-option input {
+    flex-shrink: 0;
+    width: 17px;
+    height: 17px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.quiz-option.selected {
+    border-color: var(--primary);
+    background: rgba(128, 101, 255, .13);
+}
+
+.quiz-option.selected input {
+    accent-color: var(--primary);
+}
+
+.quiz-feedback {
+    display: none;
+    margin-top: 16px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--surface-hover);
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.quiz-feedback.visible {
+    display: block;
+}
+
+.quiz-feedback.success {
+    border-color: rgba(34, 197, 94, .4);
+    background: rgba(34, 197, 94, .08);
+    color: #4ade80;
+}
+
+.quiz-feedback.error {
+    border-color: rgba(255, 173, 85, .4);
+    background: rgba(255, 173, 85, .08);
+    color: #ffba73;
+}
+
+.quiz-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 26px;
+}
+
+.quiz-nav .btn-primary,
+.quiz-nav .btn-secondary {
+    min-width: 150px;
+}
+
+.btn-secondary {
+    background: var(--surface-hover);
+    color: var(--text);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+}
+
+.quiz-result {
+    margin-top: 26px;
+    padding: 34px 28px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface);
+}
+
+.quiz-result h2 {
+    color: var(--text);
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.quiz-result p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.quiz-result .btn-primary {
+    min-width: 200px;
+}
+
+/* =========================================
+   БЛОК «ПРОДОЛЖИТЬ» НА ДАШБОРДЕ
+========================================= */
+
+.continue-card {
+    padding: 24px;
+    margin-top: 20px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--surface);
+}
+
+.continue-card .continue-kicker {
+    display: inline-block;
+    color: var(--secondary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.continue-card strong {
+    display: block;
+    color: var(--text);
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.continue-card p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.continue-card .btn-primary {
+    min-width: 170px;
+}
+
+/* =========================================
+   АДАПТАЦИЯ
+========================================= */
+
+@media (max-width: 700px) {
+    .quiz-container {
+        margin-top: 20px;
+    }
+
+    .quiz-question,
+    .quiz-result {
+        padding: 20px;
+    }
+
+    .quiz-question h3 {
+        font-size: 18px;
+    }
+
+    .quiz-nav {
+        flex-direction: column-reverse;
+    }
+
+    .quiz-nav .btn-primary,
+    .quiz-nav .btn-secondary {
+        width: 100%;
+    }
+
+    .quiz-nav .btn-secondary {
+        order: 2;
+    }
+}
